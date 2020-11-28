@@ -1,0 +1,4 @@
+{
+  "extends": "@test-project/eslint-config-flo5k5/tsconfig.base.json",
+  "include": ["./dev-packages/**/*", "./packages/**/*"]
+}

@@ -23,6 +23,6 @@ The main commands:
 
 ## Or..
 
-You can try it online here: [Github Pages](https://flo5k5.github.io/test-project/)
+You can try it online here: [https://test-project.5k5.me/](https://test-project.5k5.me/)
 
 Have a nice day!

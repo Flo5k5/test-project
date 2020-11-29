@@ -2,7 +2,7 @@
   "name": "@test-project/web",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://flo5k5.github.io/test-project",
+  "homepage": "https://test-project.5k5.me",
   "scripts": {
     "build": "react-scripts build",
     "predeploy": "yarn build",

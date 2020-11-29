@@ -1,6 +1,8 @@
 import React, { FC, useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { Input, MaterialIcon } from '../atoms';
+import HiddenLabel from '../atoms/HiddenLabel';
+import Input from '../atoms/Input';
+import MaterialIcon from '../atoms/MaterialIcon';
 import { Theme } from '../types/Theme';
 
 interface SearchBarContainerProps {
@@ -37,7 +39,7 @@ interface SearchBarProps {
   onChange?(value: string): void;
 }
 
-export const SearchBar: FC<SearchBarProps> = ({ placeholder, onChange }) => {
+const SearchBar: FC<SearchBarProps> = ({ placeholder, onChange }) => {
   const [query, setQuery] = useState('');
 
   useEffect(() => {
@@ -57,8 +59,18 @@ export const SearchBar: FC<SearchBarProps> = ({ placeholder, onChange }) => {
 
   return (
     <SearchBarContainer>
-      <Input type='search' placeholder={placeholder} onChange={onInputChange} value={query} />
+      <HiddenLabel htmlFor='search'>Search:</HiddenLabel>
+      <Input
+        aria-label='Search:'
+        id='search'
+        type='search'
+        placeholder={placeholder}
+        onChange={onInputChange}
+        value={query}
+      />
       {query && <MaterialIcon name='close' onClick={onClearClick} />}
     </SearchBarContainer>
   );
 };
+
+export default SearchBar;

@@ -50,7 +50,7 @@ interface ToggleButtonProps {
   onChange?(): void;
 }
 
-export const ToggleButton: FC<ToggleButtonProps> = ({ isChecked, onChange }) => {
+const ToggleButton: FC<ToggleButtonProps> = ({ isChecked, onChange }) => {
   return (
     <CheckBoxWrapper>
       <CheckBox id='checkbox' type='checkbox' checked={isChecked} onChange={onChange} />
@@ -58,3 +58,5 @@ export const ToggleButton: FC<ToggleButtonProps> = ({ isChecked, onChange }) => 
     </CheckBoxWrapper>
   );
 };
+
+export default ToggleButton;

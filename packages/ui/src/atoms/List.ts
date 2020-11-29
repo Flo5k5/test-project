@@ -5,7 +5,7 @@ interface ListProps {
   columns?: number;
 }
 
-export const List = styled.ul<ListProps>`
+const List = styled.ul<ListProps>`
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -30,3 +30,5 @@ export const List = styled.ul<ListProps>`
     }
   }
 `;
+
+export default List;

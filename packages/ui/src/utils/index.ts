@@ -1,1 +1,1 @@
-export * from './getInitialThemeMode';
+export { default as getInitialThemeMode } from './getInitialThemeMode';

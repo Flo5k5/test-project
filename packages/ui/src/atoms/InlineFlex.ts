@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
-export const InlineFlex = styled.div`
+const InlineFlex = styled.div`
   display: inline-flex;
 `;
+
+export default InlineFlex;

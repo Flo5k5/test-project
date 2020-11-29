@@ -4,7 +4,7 @@ interface InputProps {
   fullWidth?: boolean;
 }
 
-export const Input = styled.input<InputProps>`
+const Input = styled.input<InputProps>`
   box-sizing: border-box;
   ${({ fullWidth }) => fullWidth && 'width: 100%;'}
 
@@ -12,3 +12,5 @@ export const Input = styled.input<InputProps>`
     outline: none;
   }
 `;
+
+export default Input;

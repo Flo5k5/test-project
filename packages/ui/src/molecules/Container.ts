@@ -4,6 +4,8 @@ interface ContainerProps {
   fullWidth?: boolean;
 }
 
-export const Container = styled.div<ContainerProps>`
+const Container = styled.div<ContainerProps>`
   ${({ fullWidth }) => fullWidth && 'width: 100%;'}
 `;
+
+export default Container;

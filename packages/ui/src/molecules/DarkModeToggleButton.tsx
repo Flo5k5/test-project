@@ -1,10 +1,10 @@
 import React, { FC, useContext } from 'react';
-import { MaterialIcon } from '../atoms/MaterialIcon';
-import { ThemeModeContext } from '../theme/ThemeModeContext';
-import { ToggleButton } from './ToggleButton';
-import { InlineFlex } from '../atoms/InlineFlex';
+import MaterialIcon from '../atoms/MaterialIcon';
+import ThemeModeContext from '../theme/ThemeModeContext';
+import ToggleButton from './ToggleButton';
+import InlineFlex from '../atoms/InlineFlex';
 
-export const DarkModeToggleButton: FC = () => {
+const DarkModeToggleButton: FC = () => {
   const { themeMode, toggleMode } = useContext(ThemeModeContext);
 
   return (
@@ -15,3 +15,5 @@ export const DarkModeToggleButton: FC = () => {
     </InlineFlex>
   );
 };
+
+export default DarkModeToggleButton;

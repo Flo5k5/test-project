@@ -6,7 +6,7 @@ interface OverlayCardProps {
   theme: Theme;
 }
 
-export const CardOverlay = styled.div<OverlayCardProps>`
+const CardOverlay = styled.div<OverlayCardProps>`
   position: absolute;
   top: 0;
   left: 0;
@@ -21,3 +21,5 @@ export const CardOverlay = styled.div<OverlayCardProps>`
   ${({ theme }) => theme.background && `background-color: ${theme.background}bf;`}
   ${({ isVisible }) => (isVisible ? `visibility: visible;` : `visibility: hidden;`)}
 `;
+
+export default CardOverlay;

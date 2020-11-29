@@ -10,4 +10,4 @@ const Image = styled.img<ImageProps>`
   ${({ fullHeight }) => fullHeight && `height: 100%;`}
 `;
 
-export { Image };
+export default Image;

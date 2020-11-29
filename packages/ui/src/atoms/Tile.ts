@@ -4,7 +4,7 @@ interface TileProps {
   width: string;
 }
 
-export const Tile = styled.button<TileProps>`
+const Tile = styled.button<TileProps>`
   background: #fff;
   border: 1px solid #999;
   font-size: 3em;
@@ -16,3 +16,5 @@ export const Tile = styled.button<TileProps>`
   padding: 0;
   text-align: center;
 `;
+
+export default Tile;

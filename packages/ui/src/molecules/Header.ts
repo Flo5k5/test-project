@@ -6,7 +6,7 @@ interface HeaderProps {
   theme: Theme;
 }
 
-export const Header = styled.header<HeaderProps>`
+const Header = styled.header<HeaderProps>`
   display: grid;
   align-items: center;
   padding: 0 10px;
@@ -41,3 +41,5 @@ export const Header = styled.header<HeaderProps>`
     }
   }
 `;
+
+export default Header;

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Theme } from '../types/Theme';
-import { MaterialIcon } from './MaterialIcon';
+import MaterialIcon from './MaterialIcon';
 
 interface ContainerProps {
   theme: Theme;
@@ -17,10 +17,12 @@ const Container = styled.div<ContainerProps>`
   justify-content: center;
 `;
 
-export const BrokenImage: FC = () => {
+const BrokenImage: FC = () => {
   return (
     <Container>
       <MaterialIcon name='broken_image' />
     </Container>
   );
 };
+
+export default BrokenImage;

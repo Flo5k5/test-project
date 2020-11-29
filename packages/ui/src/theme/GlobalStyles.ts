@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import { Theme } from '../types/Theme';
 
-export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
+const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
   *,
   *::after,
   *::before {
@@ -27,3 +27,5 @@ export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
     appearance: none;
   }
   `;
+
+export default GlobalStyles;

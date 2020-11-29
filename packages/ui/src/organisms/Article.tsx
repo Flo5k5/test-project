@@ -1,17 +1,20 @@
 import React, { FC, ReactNode, useState } from 'react';
 import styled from 'styled-components';
-import { BrokenImage, Image, Title3 } from '../atoms';
+import BrokenImage from '../atoms/BrokenImage';
+import Image from '../atoms/Image';
+import Title3 from '../atoms/Title3';
+
 import { maxWidthDevice } from '../theme';
 
-export const ArticleText = styled.article``;
+const ArticleText = styled.article``;
 
-export const ArticleImage = styled.div``;
+const ArticleImage = styled.div``;
 
 interface ArticleContainerProps {
   hasImage?: boolean;
 }
 
-export const ArticleContainer = styled.div<ArticleContainerProps>`
+const ArticleContainer = styled.div<ArticleContainerProps>`
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -49,7 +52,7 @@ interface ArticleProps {
   imageSource?: string;
 }
 
-export const Article: FC<ArticleProps> = ({ children, title, imageSource }) => {
+const Article: FC<ArticleProps> = ({ children, title, imageSource }) => {
   const [isImageBroken, setIsImageBroken] = useState(false);
 
   const onImageError = () => {
@@ -82,3 +85,5 @@ export const Article: FC<ArticleProps> = ({ children, title, imageSource }) => {
     </ArticleContainer>
   );
 };
+
+export default Article;

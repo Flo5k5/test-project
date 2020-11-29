@@ -5,7 +5,7 @@ interface ContentWrapperProps {
   fullWidth?: boolean;
 }
 
-export const ContentWrapper = styled.div<ContentWrapperProps>`
+const ContentWrapper = styled.div<ContentWrapperProps>`
   display: flex;
   flex-direction: column;
   margin: 10px auto;
@@ -24,3 +24,5 @@ export const ContentWrapper = styled.div<ContentWrapperProps>`
     max-width: 1400px;
   }
 `;
+
+export default ContentWrapper;

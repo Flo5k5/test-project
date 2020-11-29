@@ -6,7 +6,7 @@ import { ThemeMode } from '../types/ThemeMode';
  */
 const MEDIA_QUERY_COLOR_SHEME_MATCH = '(prefers-color-scheme: dark)';
 
-export const getInitialThemeMode = (): ThemeMode => {
+const getInitialThemeMode = (): ThemeMode => {
   const localTheme = window.localStorage.getItem('theme') as ThemeMode;
 
   if (
@@ -25,3 +25,5 @@ export const getInitialThemeMode = (): ThemeMode => {
   window.localStorage.setItem('theme', 'light');
   return 'light';
 };
+
+export default getInitialThemeMode;

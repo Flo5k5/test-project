@@ -1,5 +1,8 @@
 import React, { FC, useState } from 'react';
-import { BrokenImage, Image, ListItem, CardOverlay } from '../../atoms';
+import BrokenImage from '../atoms/BrokenImage';
+import Image from '../atoms/Image';
+import ListItem from '../atoms/ListItem';
+import CardOverlay from '../atoms/CardOverlay';
 
 interface CardProps {
   /** Id of the item displayed. */
@@ -13,7 +16,7 @@ interface CardProps {
 }
 
 /** Displays informations about a movie. */
-export const Card: FC<CardProps> = ({ id, imageSource, title, onClick }) => {
+const Card: FC<CardProps> = ({ id, imageSource, title, onClick }) => {
   const [isMouseOver, setIsMouseOver] = useState(false);
   const [isImageBroken, setIsImageBroken] = useState(false);
 
@@ -49,3 +52,5 @@ export const Card: FC<CardProps> = ({ id, imageSource, title, onClick }) => {
     </ListItem>
   );
 };
+
+export default Card;

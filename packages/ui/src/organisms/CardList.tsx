@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { List } from '../atoms';
-import { Card } from '../molecules/Card';
+import List from '../atoms/List';
+import Card from '../molecules/Card';
 
 export interface CardListItem {
   id: number;
@@ -13,7 +13,7 @@ interface CardListProps {
   onCardClick?(id?: number): void;
 }
 
-export const CardList: FC<CardListProps> = ({ items, onCardClick }) => {
+const CardList: FC<CardListProps> = ({ items, onCardClick }) => {
   return (
     <List columns={5}>
       {items.map(({ id, imageSource, title }) => (
@@ -22,3 +22,5 @@ export const CardList: FC<CardListProps> = ({ items, onCardClick }) => {
     </List>
   );
 };
+
+export default CardList;

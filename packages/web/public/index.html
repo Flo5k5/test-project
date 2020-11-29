@@ -24,16 +24,36 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Movies</title>
+
+    <!-- Preconnect / dns-prefetch -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="preconnect" href="https://api.themoviedb.org" crossorigin />
+    <link rel="preconnect" href="https://image.tmdb.org" crossorigin />
 
     <!-- Webfonts -->
     <link
-      rel="stylesheet"
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
+      as="font"
     />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"
+      as="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"
+      media="print"
+      onload="this.media='all'"
     />
   </head>
   <body>

@@ -39,7 +39,7 @@ const MoviesList: FC<MoviesListProps> = ({ imageSize = 'w185' }) => {
 
   const movies = useSelector(selectMovies);
   const loadingStatus = useSelector(selectLoadingStatus);
-  const { imageBaseUrl } = useSelector(selectImageConfiguration);
+  const { imageSecureBaseUrl } = useSelector(selectImageConfiguration);
 
   const [query, setQuery] = useState<string>();
 
@@ -90,7 +90,7 @@ const MoviesList: FC<MoviesListProps> = ({ imageSize = 'w185' }) => {
   const items: CardListItem[] = movies.map(({ id, poster_path, title }) => ({
     id,
     // eslint-disable-next-line camelcase
-    imageSource: `${imageBaseUrl}${imageSize}${poster_path}`,
+    imageSource: `${imageSecureBaseUrl}${imageSize}${poster_path}`,
     title,
   }));
 

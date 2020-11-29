@@ -70,14 +70,7 @@ const Article: FC<ArticleProps> = ({ children, title, imageSource }) => {
       {imageSource && (
         <ArticleImage>
           {!isImageBroken && (
-            <Image
-              alt={title}
-              fullWidth
-              fullHeight
-              src={imageSource}
-              loading='lazy'
-              onError={onImageError}
-            />
+            <Image alt={title} fullWidth src={imageSource} loading='lazy' onError={onImageError} />
           )}
           {isImageBroken && <BrokenImage />}
         </ArticleImage>

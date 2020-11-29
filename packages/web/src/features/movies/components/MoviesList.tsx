@@ -33,7 +33,7 @@ interface MoviesListProps {
 /**
  * Displays a list of popular movies and a search bar to fetch movies.
  */
-const MoviesList: FC<MoviesListProps> = ({ imageSize = 'w185' }) => {
+const MoviesList: FC<MoviesListProps> = ({ imageSize = 'w500' }) => {
   const history = useHistory();
   const dispatch = useDispatch();
 

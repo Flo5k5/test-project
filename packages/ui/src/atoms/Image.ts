@@ -8,6 +8,7 @@ interface ImageProps {
 const Image = styled.img<ImageProps>`
   ${({ fullWidth }) => fullWidth && `width: 100%;`}
   ${({ fullHeight }) => fullHeight && `height: 100%;`}
+  vertical-align: top;
 `;
 
 export default Image;

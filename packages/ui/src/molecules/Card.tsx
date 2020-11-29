@@ -36,14 +36,7 @@ const Card: FC<CardProps> = ({ id, imageSource, title, onClick }) => {
       onMouseEnter={() => setIsMouseOver(true)}
       onMouseLeave={() => setIsMouseOver(false)}>
       {!isImageBroken && (
-        <Image
-          alt={title}
-          fullWidth
-          fullHeight
-          src={imageSource}
-          loading='lazy'
-          onError={onImageError}
-        />
+        <Image alt={title} fullWidth src={imageSource} loading='lazy' onError={onImageError} />
       )}
       {isImageBroken && <BrokenImage />}
       <CardOverlay isVisible={isMouseOver}>
